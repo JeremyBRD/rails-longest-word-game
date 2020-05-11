@@ -1,0 +1,14 @@
+<h1>New Game</h1>
+<ul>
+  <% @letters.each do |letter| %>
+  <li type="button" class="btn btn-primary"><%= letter %></li>
+  <% end %>
+</ul>
+<form class="form-inline">
+  <div class="form-group">
+    <label for="user-answer">Your answer</label>
+    <input type="text" id="user-answer" class="form-control mx-sm-3">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  </div>
+  <button type="submit" class="btn btn-primary">RESULT</button>
+</form>
